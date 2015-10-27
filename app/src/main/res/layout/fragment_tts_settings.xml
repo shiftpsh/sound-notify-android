@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.shiftstudios.soundnotify.fragment.TtsSettingsFragment"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="헤드셋 필요"
+            android:id="@+id/headset_switch"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:checked="false"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="음정"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/pitch_seekbar"
+                android:layout_weight="2.5"
+                android:progress="12"
+                android:max="24" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0"
+                android:id="@+id/pitch_text"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="속도"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rate_seekbar"
+                android:layout_weight="2.5"
+                android:progress="10"
+                android:max="20" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="1.0x"
+                android:id="@+id/rate_text"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="테스트 메시지 듣기"
+            android:id="@+id/testButton"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            style="@style/AppCompat.Button.Flat"
+            android:gravity="left|center_vertical" />
+
+        <Button
+            style="@style/AppCompat.Button.Flat"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="알림 수신 권한 설정"
+            android:id="@+id/notiButton"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="left|center_vertical" />
+
+    </LinearLayout>
+</RelativeLayout>
